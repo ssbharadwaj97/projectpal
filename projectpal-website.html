@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectPal - Academic Excellence Made Easy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1A5FA8;
+            --dark-blue: #0D3B66;
+            --light-blue: #3A7BC8;
+            --accent-blue: #5BA4E5;
+            --bg-light: #F8FBFF;
+            --bg-white: #FFFFFF;
+            --text-dark: #1A1A2E;
+            --text-gray: #5A5A6B;
+            --success-green: #10B981;
+            --gradient-1: linear-gradient(135deg, #1A5FA8 0%, #3A7BC8 100%);
+            --gradient-2: linear-gradient(135deg, #0D3B66 0%, #1A5FA8 100%);
+            --shadow-sm: 0 2px 8px rgba(26, 95, 168, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 95, 168, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 95, 168, 0.16);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--bg-white);
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-container h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-container span {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+        
+        .cta-header {
+            background: var(--gradient-1);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            font-size: 1rem;
+        }
+        
+        .cta-header:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 90px;
+            padding: 6rem 5% 4rem;
+            background: var(--gradient-2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-20px, 20px) rotate(5deg); }
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            margin-top: 0.5rem;
+        }
+        
+        .hero-features {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 3rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: fadeInRight 0.8s ease-out 0.4s both;
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-blue);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-text h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-text p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            background: var(--gradient-1);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-list {
+            list-style: none;
+        }
+        
+        .service-list li {
+            padding: 0.6rem 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .service-list li::before {
+            content: '✓';
+            color: var(--success-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Subjects Section */
+        .subjects {
+            padding: 6rem 5%;
+            background: white;
+        }
+        
+        .subjects-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .subject-tag {
+            background: var(--bg-light);
+            padding: 1.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .subject-tag:hover {
+            background: var(--gradient-1);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue);
+        }
+        
+        /* Why Choose Us */
+        .why-choose {
+            padding: 6rem 5%;
+            background: var(--bg-light);
+        }
+        
+        .why-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .why-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: white;
+            border-radius: 25px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        
+        .why-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .why-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 5%;
+            background: white;
+        }
+        
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: #E8F5E9;
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .chat-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .chat-info h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+        
+        .chat-info p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+        
+        .chat-message {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .chat-message::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 15px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid white;
+        }
+        
+        .chat-message p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        .rating {
+            display: flex;
+            gap: 0.3rem;
+            margin-top: 1rem;
+        }
+        
+        .rating span {
+            color: #FFB800;
+            font-size: 1.3rem;
+        }
+        
+        /* Guarantees */
+        .guarantees {
+            padding: 6rem 5%;
+            background: var(--gradient-2);
+        }
+        
+        .guarantees-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .guarantees-container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .guarantee-item {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(20px);
+            padding: 2.5rem 2rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .guarantee-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.05);
+        }
+        
+        .guarantee-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .guarantee-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .guarantee-item p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 5%;
+            background: white;
+        }
+        
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            background: var(--gradient-1);
+            padding: 4rem 3rem;
+            border-radius: 35px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .cta-container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-container p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2.5rem;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            color: var(--primary-blue);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--primary-blue);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        footer p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+            }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid,
+            .subjects-grid,
+            .why-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .cta-container h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero {
+                padding: 4rem 5% 3rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services,
+            .subjects,
+            .why-choose,
+            .testimonials,
+            .guarantees,
+            .cta-section {
+                padding: 4rem 5%;
+            }
+            
+            .logo-container h1 {
+                font-size: 1.5rem;
+            }
+            
+            .cta-header {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Scroll reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <h1>PROJECT PAL</h1>
+            </div>
+            <a href="https://wa.me/917842620890" class="cta-header">
+                💬 Chat on WhatsApp
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Academic Excellence Made Easy</h2>
+                <p>Expert support for MS students across US, UK, Canada & Australia. We help you succeed with professional assistance in assignments, projects, and dissertations.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Students Helped</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support Available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-text">
+                        <h4>Last-Minute Deadlines</h4>
+                        <p>Specialized in handling urgent tasks with quick turnaround times without compromising quality.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-text">
+                        <h4>Affordable Pricing</h4>
+                        <p>Student-friendly rates with flexible payment options and transparent pricing.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-text">
+                        <h4>100% Guarantee</h4>
+                        <p>Complete money back or free rework if the work doesn't meet your requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-header reveal">
+            <span class="section-tag">OUR SERVICES</span>
+            <h2>Comprehensive Academic Support</h2>
+            <p>From assignments to dissertations, we cover all your academic writing needs with expert precision</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">📝</div>
+                <h3>Assignments & Assessments</h3>
+                <p>Professional help with all types of coursework, homework, and academic assessments.</p>
+                <ul class="service-list">
+                    <li>Weekly assignments</li>
+                    <li>Case studies</li>
+                    <li>Lab reports</li>
+                    <li>Research papers</li>
+                </ul>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">💻</div>
+                <h3>Final Projects</h3>
+                <p>End-to-end support for capstone and final year projects across all domains.</p>
+                <ul class="service-list">
+                    <li>Project planning</li>
+                    <li>Implementation</li>
+                    <li>Documentation</li>
+                    <li>Presentation prep</li>
+                </ul>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🎓</div>
+                <h3>Dissertations & Thesis</h3>
+                <p>Comprehensive dissertation support from topic selection to final submission.</p>
+                <ul class="service-list">
+                    <li>Research design</li>
+                    <li>Literature review</li>
+                    <li>Data analysis</li>
+                    <li>Editing & proofreading</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="subjects">
+        <div class="subjects-container">
+            <div class="section-header reveal">
+                <span class="section-tag">SUBJECT EXPERTISE</span>
+                <h2>We Cover All Major Subjects</h2>
+                <p>Expert assistance across technical and business disciplines</p>
+            </div>
+            <div class="subjects-grid">
+                <div class="subject-tag reveal">🤖 Artificial Intelligence</div>
+                <div class="subject-tag reveal">🧠 Machine Learning</div>
+                <div class="subject-tag reveal">💾 Database Management</div>
+                <div class="subject-tag reveal">☁️ Cloud Computing</div>
+                <div class="subject-tag reveal">🐍 Python Programming</div>
+                <div class="subject-tag reveal">☕ Java Development</div>
+                <div class="subject-tag reveal">💼 Business Management</div>
+                <div class="subject-tag reveal">📊 Marketing</div>
+                <div class="subject-tag reveal">💵 Finance & Accounting</div>
+                <div class="subject-tag reveal">📈 Data Analytics</div>
+                <div class="subject-tag reveal">🌐 Web Development</div>
+                <div class="subject-tag reveal">📱 Mobile App Development</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="why-container">
+            <div class="section-header reveal">
+                <span class="section-tag">WHY PROJECTPAL</span>
+                <h2>Your Success Is Our Priority</h2>
+                <p>We go above and beyond to ensure your academic excellence</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon">⏰</div>
+                    <h3>On-Time Delivery</h3>
+                    <p>We understand the importance of deadlines. Your work is always delivered before the due date, guaranteed.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">🏆</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every submission goes through rigorous quality checks to ensure it meets the highest academic standards.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">🔒</div>
+                    <h3>100% Confidential</h3>
+                    <p>Your privacy is paramount. All conversations and work remain completely confidential and secure.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">👨‍🏫</div>
+                    <h3>Expert Team</h3>
+                    <p>Our team consists of subject matter experts with advanced degrees and real-world experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header reveal">
+                <span class="section-tag">STUDENT REVIEWS</span>
+                <h2>What Our Students Say</h2>
+                <p>Real feedback from students we've helped succeed</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="chat-header">
+                        <div class="chat-avatar">SA</div>
+                        <div class="chat-info">
+                            <h4>Sarah Anderson</h4>
+                            <p>MS in Computer Science, UCLA</p>
+                        </div>
+                    </div>
+                    <div class="chat-message">
+                        <p>"ProjectPal saved my semester! Got my ML assignment done in 24 hours with excellent quality. The explanations helped me understand the concepts too. Highly recommended!"</p>
+                    </div>
+                    <div class="rating">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="chat-header">
+                        <div class="chat-avatar">RP</div>
+                        <div class="chat-info">
+                            <h4>Rahul Patel</h4>
+                            <p>MBA, London Business School</p>
+                        </div>
+                    </div>
+                    <div class="chat-message">
+                        <p>"Amazing service! They handled my marketing case study with such professionalism. Delivered before deadline and the quality exceeded my expectations. Worth every penny!"</p>
+                    </div>
+                    <div class="rating">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="chat-header">
+                        <div class="chat-avatar">EJ</div>
+                        <div class="chat-info">
+                            <h4>Emily Johnson</h4>
+                            <p>MS in Data Science, Toronto</p>
+                        </div>
+                    </div>
+                    <div class="chat-message">
+                        <p>"I was stuck with my Python project and had only 2 days left. ProjectPal delivered an excellent solution with proper documentation. Scored A grade! Thank you so much!"</p>
+                    </div>
+                    <div class="rating">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantees -->
+    <section class="guarantees">
+        <div class="guarantees-container">
+            <h2>Our Ironclad Guarantees</h2>
+            <div class="guarantees-grid">
+                <div class="guarantee-item reveal">
+                    <div class="guarantee-icon">💯</div>
+                    <h3>Quality Guarantee</h3>
+                    <p>If you're not satisfied with the quality, we'll revise it until you're happy or provide a full refund.</p>
+                </div>
+                <div class="guarantee-item reveal">
+                    <div class="guarantee-icon">🎯</div>
+                    <h3>Deadline Guarantee</h3>
+                    <p>We commit to delivering your work on or before the agreed deadline, every single time.</p>
+                </div>
+                <div class="guarantee-item reveal">
+                    <div class="guarantee-icon">🔄</div>
+                    <h3>Revision Guarantee</h3>
+                    <p>Unlimited revisions until you're completely satisfied with the final deliverable.</p>
+                </div>
+                <div class="guarantee-item reveal">
+                    <div class="guarantee-icon">💰</div>
+                    <h3>Money-Back Guarantee</h3>
+                    <p>If the work fails to meet requirements, we offer a complete refund or free rework.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container reveal">
+            <h2>Ready to Excel in Your Studies?</h2>
+            <p>Join thousands of successful students. Get started with a free consultation today!</p>
+            <a href="https://wa.me/917842620890?text=Hi%20ProjectPal!%20I%20need%20help%20with%20my%20assignment" class="cta-button">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Start WhatsApp Chat
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ProjectPal. All rights reserved.</p>
+        <p>Helping students achieve academic excellence worldwide</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">📞 WhatsApp: +91 78426 20890</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917842620890?text=Hi%20ProjectPal!%20I%20need%20help%20with%20my%20assignment" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Scroll reveal animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal(); // Check on load
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
