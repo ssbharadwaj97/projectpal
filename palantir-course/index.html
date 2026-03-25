@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProjectPal - Academic Excellence Made Easy</title>
+    <title>ProjectPal - Palantir Foundry Course</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -79,18 +79,16 @@
             gap: 1rem;
         }
 
+        .logo-container a {
+            text-decoration: none;
+        }
+
         .logo-container h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 2rem;
             font-weight: 800;
             color: var(--primary-blue);
             letter-spacing: -0.5px;
-        }
-
-        .logo-container span {
-            font-size: 0.85rem;
-            color: var(--text-gray);
-            font-weight: 500;
         }
 
         .cta-header {
@@ -267,13 +265,7 @@
             line-height: 1.6;
         }
 
-        /* Services Section */
-        .services {
-            padding: 6rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
+        /* Section Styles */
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
@@ -304,530 +296,6 @@
             color: var(--text-gray);
             max-width: 700px;
             margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 25px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-1);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--gradient-1);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: var(--text-gray);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-list {
-            list-style: none;
-        }
-
-        .service-list li {
-            padding: 0.6rem 0;
-            color: var(--text-gray);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .service-list li::before {
-            content: '✓';
-            color: var(--success-green);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Subjects Section */
-        .subjects {
-            padding: 6rem 5%;
-            background: white;
-        }
-
-        .subjects-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .subjects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .subject-tag {
-            background: var(--bg-light);
-            padding: 1.5rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            font-weight: 600;
-            color: var(--text-dark);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .subject-tag:hover {
-            background: var(--gradient-1);
-            color: white;
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary-blue);
-        }
-
-        /* Why Choose Us */
-        .why-choose {
-            padding: 6rem 5%;
-            background: var(--bg-light);
-        }
-
-        .why-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .why-card {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            background: white;
-            border-radius: 25px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-        }
-
-        .why-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .why-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: var(--gradient-1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-        }
-
-        .why-card h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .why-card p {
-            color: var(--text-gray);
-            line-height: 1.7;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 6rem 5%;
-            background: white;
-        }
-
-        .testimonials-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: #E8F5E9;
-            padding: 2rem;
-            border-radius: 20px;
-            position: relative;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .chat-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .chat-avatar {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .chat-info h4 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.25rem;
-        }
-
-        .chat-info p {
-            font-size: 0.85rem;
-            color: var(--text-gray);
-        }
-
-        .chat-message {
-            background: white;
-            padding: 1.2rem;
-            border-radius: 15px;
-            margin-bottom: 1rem;
-            position: relative;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .chat-message::before {
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 15px;
-            width: 0;
-            height: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-right: 10px solid white;
-        }
-
-        .chat-message p {
-            color: var(--text-dark);
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        .rating {
-            display: flex;
-            gap: 0.3rem;
-            margin-top: 1rem;
-        }
-
-        .rating span {
-            color: #FFB800;
-            font-size: 1.3rem;
-        }
-
-        /* Guarantees */
-        .guarantees {
-            padding: 6rem 5%;
-            background: var(--gradient-2);
-        }
-
-        .guarantees-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .guarantees-container h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 3rem;
-        }
-
-        .guarantees-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .guarantee-item {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            padding: 2.5rem 2rem;
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .guarantee-item:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: scale(1.05);
-        }
-
-        .guarantee-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .guarantee-item h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .guarantee-item p {
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 6rem 5%;
-            background: white;
-        }
-
-        .cta-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            background: var(--gradient-1);
-            padding: 4rem 3rem;
-            border-radius: 35px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .cta-container h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-container p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            background: white;
-            color: var(--primary-blue);
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button svg {
-            width: 28px;
-            height: 28px;
-            fill: var(--primary-blue);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-blue);
-            color: white;
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
-        footer p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 0.5rem;
-        }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 999;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            }
-
-            50% {
-                box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
-            }
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .hero-text h2 {
-                font-size: 2.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2.2rem;
-            }
-
-            .services-grid,
-            .subjects-grid,
-            .why-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .cta-container h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero {
-                padding: 4rem 5% 3rem;
-            }
-
-            .hero-text h2 {
-                font-size: 2rem;
-            }
-
-            .hero-text p {
-                font-size: 1.1rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .services,
-            .subjects,
-            .why-choose,
-            .testimonials,
-            .guarantees,
-            .cta-section {
-                padding: 4rem 5%;
-            }
-
-            .logo-container h1 {
-                font-size: 1.5rem;
-            }
-
-            .cta-header {
-                padding: 0.7rem 1.5rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        /* Scroll reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         /* Curriculum Section */
@@ -992,12 +460,6 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        @media (max-width: 900px) {
-            .path-selection-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .track-content {
             display: none;
             animation: fadeIn 0.5s ease-out;
@@ -1090,6 +552,159 @@
             line-height: 1.5;
         }
 
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 5%;
+            background: var(--bg-light);
+        }
+
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            background: var(--gradient-1);
+            padding: 4rem 3rem;
+            border-radius: 35px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-container p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            color: var(--primary-blue);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Scroll reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-text h2 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .cta-container h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .path-selection-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .track-timeline {
                 grid-template-columns: 1fr;
@@ -1101,157 +716,41 @@
             }
         }
 
-        /* Modal Overlay */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(8px);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background: var(--bg-light);
-            width: 95%;
-            max-width: 1400px;
-            height: 90vh;
-            border-radius: 25px;
-            overflow: hidden;
-            position: relative;
-            transform: translateY(50px) scale(0.95);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            display: flex;
-        }
-
-        .modal-overlay.active .modal-content {
-            transform: translateY(0) scale(1);
-        }
-
-        .modal-sidebar {
-            width: 300px;
-            background: var(--bg-white);
-            border-right: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 2rem 1.5rem;
-            flex-shrink: 0;
-            overflow-y: auto;
-            position: relative;
-            z-index: 10;
-        }
-
-        .modal-sidebar h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-            color: var(--dark-blue);
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--bg-light);
-        }
-
-        .course-nav-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            border-radius: 12px;
-            cursor: pointer;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--text-gray);
-            transition: all 0.3s ease;
-        }
-
-        .course-nav-item:hover {
-            background: var(--bg-light);
-            color: var(--primary-blue);
-        }
-
-        .course-nav-item.active {
-            background: var(--gradient-1);
-            color: white;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .modal-main {
-            flex-grow: 1;
-            overflow-y: auto;
-            position: relative;
-            background: var(--bg-light);
-            padding: 2rem 5%;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: var(--bg-white);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            cursor: pointer;
-            box-shadow: var(--shadow-md);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-
-        .modal-close:hover {
-            background: var(--primary-blue);
-            color: white;
-            transform: rotate(90deg);
-        }
-
-        @media (max-width: 900px) {
-            .modal-content {
-                flex-direction: column;
+        @media (max-width: 640px) {
+            .hero {
+                padding: 4rem 5% 3rem;
             }
 
-            .modal-sidebar {
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-                padding: 1.5rem;
-                overflow-x: auto;
-                display: flex;
-                gap: 1rem;
+            .hero-text h2 {
+                font-size: 2rem;
             }
 
-            .modal-sidebar h3 {
-                display: none;
+            .hero-text p {
+                font-size: 1.1rem;
             }
 
-            .course-nav-item {
-                white-space: nowrap;
-                margin-bottom: 0;
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .modal-main {
-                padding: 1.5rem;
+            .section-header h2 {
+                font-size: 1.8rem;
             }
-        }
 
-        .cursor-pointer {
-            cursor: pointer;
+            .curriculum-section,
+            .cta-section {
+                padding: 4rem 5%;
+            }
+
+            .logo-container h1 {
+                font-size: 1.5rem;
+            }
+
+            .cta-header {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -1261,10 +760,13 @@
     <header>
         <nav>
             <div class="logo-container">
-                <h1>PROJECT PAL</h1>
+                <a href="https://projectpal.stepss.in/">
+                    <h1>PROJECT PAL</h1>
+                </a>
             </div>
-            <a href="https://wa.me/917842620890" class="cta-header">
-                💬 Chat on WhatsApp
+            <a href="https://wa.me/917842620890?text=Hi%20ProjectPal!%20I'm%20interested%20in%20the%20Palantir%20Foundry%20course"
+                class="cta-header">
+                Enroll Now
             </a>
         </nav>
     </header>
@@ -1273,508 +775,239 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h2>Academic Excellence Made Easy</h2>
-                <p>Expert support for MS students across US, UK, Canada & Australia. We help you succeed with
-                    professional assistance in assignments, projects, and dissertations.</p>
+                <h2>Master Palantir Foundry</h2>
+                <p>A structured, hands-on training program that takes you from platform essentials to advanced
+                    engineering. Choose your career track and build real-world projects.</p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">1000+</span>
-                        <span class="stat-label">Students Helped</span>
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Weeks Program</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">98%</span>
-                        <span class="stat-label">Success Rate</span>
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Career Tracks</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Support Available</span>
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Hands-On</span>
                     </div>
                 </div>
             </div>
             <div class="hero-features">
                 <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
+                    <div class="feature-icon">🛠️</div>
                     <div class="feature-text">
-                        <h4>Last-Minute Deadlines</h4>
-                        <p>Specialized in handling urgent tasks with quick turnaround times without compromising
-                            quality.</p>
+                        <h4>Data Engineer Track</h4>
+                        <p>Build the "pipes" that move and clean data at enterprise scale.</p>
                     </div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">💰</div>
+                    <div class="feature-icon">📊</div>
                     <div class="feature-text">
-                        <h4>Affordable Pricing</h4>
-                        <p>Student-friendly rates with flexible payment options and transparent pricing.</p>
+                        <h4>Data Analyst Track</h4>
+                        <p>Create dashboards and reports that help managers make decisions.</p>
                     </div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
+                    <div class="feature-icon">🤖</div>
                     <div class="feature-text">
-                        <h4>100% Guarantee</h4>
-                        <p>Complete money back or free rework if the work doesn't meet your requirements.</p>
+                        <h4>AI Data Engineer Track</h4>
+                        <p>Use AI to automate work with chatbots and intelligent agents.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="section-header reveal">
-            <span class="section-tag">OUR SERVICES</span>
-            <h2>Comprehensive Academic Support</h2>
-            <p>From assignments to dissertations, we cover all your academic writing needs with expert precision</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card reveal">
-                <div class="service-icon">📝</div>
-                <h3>Assignments & Assessments</h3>
-                <p>Professional help with all types of coursework, homework, and academic assessments.</p>
-                <ul class="service-list">
-                    <li>Weekly assignments</li>
-                    <li>Case studies</li>
-                    <li>Lab reports</li>
-                    <li>Research papers</li>
-                </ul>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon">💻</div>
-                <h3>Final Projects</h3>
-                <p>End-to-end support for capstone and final year projects across all domains.</p>
-                <ul class="service-list">
-                    <li>Project planning</li>
-                    <li>Implementation</li>
-                    <li>Documentation</li>
-                    <li>Presentation prep</li>
-                </ul>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-icon">🎓</div>
-                <h3>Dissertations & Thesis</h3>
-                <p>Comprehensive dissertation support from topic selection to final submission.</p>
-                <ul class="service-list">
-                    <li>Research design</li>
-                    <li>Literature review</li>
-                    <li>Data analysis</li>
-                    <li>Editing & proofreading</li>
-                </ul>
-            </div>
-            
-            <div class="service-card reveal cursor-pointer" onclick="openTrainingModal()">
-                <div class="service-icon">🚀</div>
-                <h3>Training & Courses</h3>
-                <p>Master enterprise tech with our specialized, hands-on curriculum.</p>
-                <ul class="service-list">
-                    <li>Palantir Foundry</li>
-                    <li>AWS Cloud Master</li>
-                    <li>Data Science Pro</li>
-                </ul>
-                <div style="margin-top: 1.5rem; color: var(--primary-blue); font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                    Click to view curriculum <span>&rarr;</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Subjects Section -->
-    <section class="subjects">
-        <div class="subjects-container">
+    <!-- Curriculum Section -->
+    <section class="curriculum-section">
+        <div class="curriculum-container">
             <div class="section-header reveal">
-                <span class="section-tag">SUBJECT EXPERTISE</span>
-                <h2>We Cover All Major Subjects</h2>
-                <p>Expert assistance across technical and business disciplines</p>
+                <span class="section-tag">TRAINING PROGRAM</span>
+                <h2>Course Curriculum</h2>
+                <p>A structured, hands-on curriculum progressing from essentials to advanced engineering.</p>
             </div>
-            <div class="subjects-grid">
-                <div class="subject-tag reveal">🤖 Artificial Intelligence</div>
-                <div class="subject-tag reveal">🧠 Machine Learning</div>
-                <div class="subject-tag reveal">💾 Database Management</div>
-                <div class="subject-tag reveal">☁️ Cloud Computing</div>
-                <div class="subject-tag reveal">🐍 Python Programming</div>
-                <div class="subject-tag reveal">☕ Java Development</div>
-                <div class="subject-tag reveal">💼 Business Management</div>
-                <div class="subject-tag reveal">📊 Marketing</div>
-                <div class="subject-tag reveal">💵 Finance & Accounting</div>
-                <div class="subject-tag reveal">📈 Data Analytics</div>
-                <div class="subject-tag reveal">🌐 Web Development</div>
-                <div class="subject-tag reveal">📱 Mobile App Development</div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Curriculum Modal -->
-    <div class="modal-overlay" id="curriculum-modal">
-        <div class="modal-content">
-            <!-- Sidebar -->
-            <div class="modal-sidebar">
-                <h3>Our Courses</h3>
-
-                <div class="course-nav-item active" onclick="switchCourse('palantir', event)">
-                    <span class="course-nav-icon">🚀</span>
-                    <span>Palantir Foundry</span>
+            <!-- Phase 1 -->
+            <div class="phase-card reveal">
+                <div class="phase-header">
+                    <h3>Phase 1: The Essentials</h3>
+                    <p>Weeks 1-2 | Goal: Learn the platform "Language"</p>
                 </div>
-
-                <div class="course-nav-item" onclick="switchCourse('aws', event)">
-                    <span class="course-nav-icon">☁️</span>
-                    <span>AWS Cloud Master</span>
-                </div>
-
-                <div class="course-nav-item" onclick="switchCourse('data', event)">
-                    <span class="course-nav-icon">📊</span>
-                    <span>Data Science Pro</span>
+                <div class="phase-grid">
+                    <div class="phase-module">
+                        <h4>🧩 The Digital Twin</h4>
+                        <p>Moving from boring spreadsheets to real-world "Objects" (like a Customer or Flight).</p>
+                    </div>
+                    <div class="phase-module">
+                        <h4>🔒 Safe Keeping</h4>
+                        <p>Learning how to lock and share data properly so only the right people see it.</p>
+                    </div>
+                    <div class="phase-module">
+                        <h4>🤖 AI Basics</h4>
+                        <p>A simple intro to how AI works safely inside the platform.</p>
+                    </div>
+                    <div class="phase-module">
+                        <h4>📂 Finding Your Way</h4>
+                        <p>How to organize folders and find files in the system.</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Main Content Area -->
-            <div class="modal-main" id="modal-main-content">
-                <button class="modal-close" onclick="closeTrainingModal()">×</button>
+            <!-- Track Selection -->
+            <div>
+                <!-- Connecting Arrow -->
+                <div class="path-connector">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </div>
 
-                <!-- Course: Palantir -->
-                <div id="course-palantir" class="course-container" style="display: block;">
-                    <section class="curriculum-section" style="padding: 0; background: transparent;">
-                        <div class="curriculum-container">
-                            <div class="section-header">
-                                <span class="section-tag">TRAINING PROGRAM</span>
-                                <h2>Master Enterprise Tech</h2>
-                                <p>A structured, hands-on curriculum passing from essentials to advanced engineering.
-                                </p>
+                <div class="section-header reveal">
+                    <h2>Choose Your Track</h2>
+                    <p>Select a specialization path based on your career goals</p>
+                </div>
+
+                <div class="path-selection-grid reveal">
+                    <div class="path-card active" onclick="switchTrack(event, 'track-de')">
+                        <div class="path-icon">🛠️</div>
+                        <h4>Data Engineer</h4>
+                        <p>The Builder</p>
+                    </div>
+                    <div class="path-card" onclick="switchTrack(event, 'track-da')">
+                        <div class="path-icon">📊</div>
+                        <h4>Data Analyst</h4>
+                        <p>The Storyteller</p>
+                    </div>
+                    <div class="path-card" onclick="switchTrack(event, 'track-ai')">
+                        <div class="path-icon">🤖</div>
+                        <h4>AI Data Engineer</h4>
+                        <p>The Intelligent Builder</p>
+                    </div>
+                </div>
+
+                <!-- Data Engineer Track -->
+                <div id="track-de" class="track-content active">
+                    <div class="track-header">
+                        <h3>Data Engineer: The Builder</h3>
+                        <p>Goal: Building the "pipes" that move and clean data.</p>
+                    </div>
+                    <div class="track-timeline">
+                        <div class="timeline-section">
+                            <h4>Weeks 3-5: Building Pipelines</h4>
+                            <div class="timeline-item">
+                                <h5>Bringing Data In</h5>
+                                <p>Connecting to outside sources like Google Drive or Excel.</p>
                             </div>
-
-                            <!-- Phase 1 -->
-                            <div class="phase-card">
-                                <div class="phase-header">
-                                    <h3>Phase 1: The Essentials</h3>
-                                    <p>Weeks 1–2 • Goal: Learn the platform "Language"</p>
-                                </div>
-                                <div class="phase-grid">
-                                    <div class="phase-module">
-                                        <h4>🧩 The Digital Twin</h4>
-                                        <p>Moving from boring spreadsheets to real-world "Objects" (like a Customer or
-                                            Flight).</p>
-                                    </div>
-                                    <div class="phase-module">
-                                        <h4>🔒 Safe Keeping</h4>
-                                        <p>Learning how to lock and share data properly so only the right people see it.
-                                        </p>
-                                    </div>
-                                    <div class="phase-module">
-                                        <h4>🤖 AI Basics</h4>
-                                        <p>A simple intro to how AI works safely inside the platform.</p>
-                                    </div>
-                                    <div class="phase-module">
-                                        <h4>📂 Finding Your Way</h4>
-                                        <p>How to organize folders and find files in the system.</p>
-                                    </div>
-                                </div>
+                            <div class="timeline-item">
+                                <h5>The Transformation Tool</h5>
+                                <p>Using simple drag-and-drop tools to clean and join data.</p>
                             </div>
-
-                            <!-- Tracks -->
-                            <div>
-                                <!-- Connecting Arrow -->
-                                <div class="path-connector">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <polyline points="19 12 12 19 5 12"></polyline>
-                                    </svg>
-                                </div>
-
-                                <div class="path-selection-grid">
-                                    <div class="path-card active" onclick="switchTrack(event, 'track-de')">
-                                        <div class="path-icon">🛠️</div>
-                                        <h4>Data Engineer</h4>
-                                        <p>The Builder</p>
-                                    </div>
-                                    <div class="path-card" onclick="switchTrack(event, 'track-da')">
-                                        <div class="path-icon">📊</div>
-                                        <h4>Data Analyst</h4>
-                                        <p>The Storyteller</p>
-                                    </div>
-                                    <div class="path-card" onclick="switchTrack(event, 'track-ai')">
-                                        <div class="path-icon">🤖</div>
-                                        <h4>AI Data Engineer</h4>
-                                        <p>The Intelligent Builder</p>
-                                    </div>
-                                </div>
-
-                                <!-- Data Engineer Track -->
-                                <div id="track-de" class="track-content active">
-                                    <div class="track-header">
-                                        <h3>Data Engineer: The Builder</h3>
-                                        <p>Goal: Building the "pipes" that move and clean data.</p>
-                                    </div>
-                                    <div class="track-timeline">
-                                        <div class="timeline-section">
-                                            <h4>Weeks 3–5: Building Pipelines</h4>
-                                            <div class="timeline-item">
-                                                <h5>Bringing Data In</h5>
-                                                <p>Connecting to outside sources like Google Drive or Excel.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>The Transformation Tool</h5>
-                                                <p>Using simple drag-and-drop tools to clean and join data.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Pro Coding</h5>
-                                                <p>Using Python or SQL to handle the really messy data.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Health Monitoring</h5>
-                                                <p>Making sure the data refreshes every day without breaking.</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-section">
-                                            <h4>Weeks 6–10: Job-Specific Projects</h4>
-                                            <div class="timeline-item">
-                                                <h5>Project 1: The Master Dataset</h5>
-                                                <p>Take data from three different places and merge them into one perfect
-                                                    "source of truth."</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Project 2: Big Data Portfolio</h5>
-                                                <p>Build a high-speed pipeline that handles millions of rows to show you
-                                                    can handle "Enterprise Scale."</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Data Analyst Track -->
-                                <div id="track-da" class="track-content">
-                                    <div class="track-header">
-                                        <h3>Data Analyst: The Storyteller</h3>
-                                        <p>Goal: Creating dashboards that help managers make decisions.</p>
-                                    </div>
-                                    <div class="track-timeline">
-                                        <div class="timeline-section">
-                                            <h4>Weeks 3–5: Visuals & Logic</h4>
-                                            <div class="timeline-item">
-                                                <h5>Finding Patterns</h5>
-                                                <p>Using smart tools to find trends in big data sets.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Smart Charts</h5>
-                                                <p>Building advanced graphs that show changes over time.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>App Design</h5>
-                                                <p>Creating simple, clean buttons and layouts for users.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Live Reports</h5>
-                                                <p>Building documents that update themselves automatically.</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-section">
-                                            <h4>Weeks 6–10: Job-Specific Projects</h4>
-                                            <div class="timeline-item">
-                                                <h5>Project 1: The CEO Dashboard</h5>
-                                                <p>Build a report that finds the 3 biggest problems in a business and
-                                                    suggests how to fix them.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Project 2: The Daily Tool</h5>
-                                                <p>Create a "Work App" for a specific person (like a Store Manager) to
-                                                    track their daily goals.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- AI Data Engineer Track -->
-                                <div id="track-ai" class="track-content">
-                                    <div class="track-header">
-                                        <h3>AI Data Engineer: The Intelligent Builder</h3>
-                                        <p>Goal: Using AI to automate work.</p>
-                                    </div>
-                                    <div class="track-timeline">
-                                        <div class="timeline-section">
-                                            <h4>Weeks 3–5: AI & Automation</h4>
-                                            <div class="timeline-item">
-                                                <h5>AI Logic</h5>
-                                                <p>Building chatbots that can actually "read" your company data.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Smart Agents</h5>
-                                                <p>Creating AI assistants that can perform tasks, not just talk.</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Quality Control</h5>
-                                                <p>Testing the AI to make sure it doesn't give wrong or "hallucinated"
-                                                    answers.</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-section">
-                                            <h4>Weeks 6–10: Job-Specific Projects</h4>
-                                            <div class="timeline-item">
-                                                <h5>Project 1: The "Ask My Data" Bot</h5>
-                                                <p>Build an AI assistant that can answer questions like "Which of our
-                                                    shipments are going to be late?"</p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h5>Project 2: Auto-Processor</h5>
-                                                <p>Build a system where AI reads customer emails and automatically
-                                                    starts a "Support Ticket" for the team.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="timeline-item">
+                                <h5>Pro Coding</h5>
+                                <p>Using Python or SQL to handle the really messy data.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Health Monitoring</h5>
+                                <p>Making sure the data refreshes every day without breaking.</p>
                             </div>
                         </div>
-                    </section>
-                </div> <!-- End Course: Palantir -->
-
-                <!-- Course: AWS -->
-                <div id="course-aws" class="course-container" style="display: none;">
-                    <section class="curriculum-section" style="padding: 0; background: transparent;">
-                        <div class="curriculum-container">
-                            <div class="section-header">
-                                <span class="section-tag">COMING SOON</span>
-                                <h2>AWS Cloud Master</h2>
-                                <p>This curriculum is currently being finalized. Stay tuned!</p>
+                        <div class="timeline-section">
+                            <h4>Weeks 6-10: Job-Specific Projects</h4>
+                            <div class="timeline-item">
+                                <h5>Project 1: The Master Dataset</h5>
+                                <p>Take data from three different places and merge them into one perfect "source of
+                                    truth."</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Project 2: Big Data Portfolio</h5>
+                                <p>Build a high-speed pipeline that handles millions of rows to show you can handle
+                                    "Enterprise Scale."</p>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
 
-                <!-- Course: Data -->
-                <div id="course-data" class="course-container" style="display: none;">
-                    <section class="curriculum-section" style="padding: 0; background: transparent;">
-                        <div class="curriculum-container">
-                            <div class="section-header">
-                                <span class="section-tag">COMING SOON</span>
-                                <h2>Data Science Pro</h2>
-                                <p>This curriculum is currently being finalized. Stay tuned!</p>
+                <!-- Data Analyst Track -->
+                <div id="track-da" class="track-content">
+                    <div class="track-header">
+                        <h3>Data Analyst: The Storyteller</h3>
+                        <p>Goal: Creating dashboards that help managers make decisions.</p>
+                    </div>
+                    <div class="track-timeline">
+                        <div class="timeline-section">
+                            <h4>Weeks 3-5: Visuals & Logic</h4>
+                            <div class="timeline-item">
+                                <h5>Finding Patterns</h5>
+                                <p>Using smart tools to find trends in big data sets.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Smart Charts</h5>
+                                <p>Building advanced graphs that show changes over time.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>App Design</h5>
+                                <p>Creating simple, clean buttons and layouts for users.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Live Reports</h5>
+                                <p>Building documents that update themselves automatically.</p>
                             </div>
                         </div>
-                    </section>
-                </div>
-
-            </div> <!-- End Main Content Area -->
-        </div>
-    </div>
-
-    <!-- Why Choose Us -->
-    <section class="why-choose">
-        <div class="why-container">
-            <div class="section-header reveal">
-                <span class="section-tag">WHY PROJECTPAL</span>
-                <h2>Your Success Is Our Priority</h2>
-                <p>We go above and beyond to ensure your academic excellence</p>
-            </div>
-            <div class="why-grid">
-                <div class="why-card reveal">
-                    <div class="why-icon">⏰</div>
-                    <h3>On-Time Delivery</h3>
-                    <p>We understand the importance of deadlines. Your work is always delivered before the due date,
-                        guaranteed.</p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-icon">🏆</div>
-                    <h3>Quality Assurance</h3>
-                    <p>Every submission goes through rigorous quality checks to ensure it meets the highest academic
-                        standards.</p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-icon">🔒</div>
-                    <h3>100% Confidential</h3>
-                    <p>Your privacy is paramount. All conversations and work remain completely confidential and secure.
-                    </p>
-                </div>
-                <div class="why-card reveal">
-                    <div class="why-icon">👨‍🏫</div>
-                    <h3>Expert Team</h3>
-                    <p>Our team consists of subject matter experts with advanced degrees and real-world experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="testimonials-container">
-            <div class="section-header reveal">
-                <span class="section-tag">STUDENT REVIEWS</span>
-                <h2>What Our Students Say</h2>
-                <p>Real feedback from students we've helped succeed</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
-                    <div class="chat-header">
-                        <div class="chat-avatar">SA</div>
-                        <div class="chat-info">
-                            <h4>Rishika</h4>
-                            <p>MS in Computer Science, Stevens Institute of Technology</p>
+                        <div class="timeline-section">
+                            <h4>Weeks 6-10: Job-Specific Projects</h4>
+                            <div class="timeline-item">
+                                <h5>Project 1: The CEO Dashboard</h5>
+                                <p>Build a report that finds the 3 biggest problems in a business and suggests how to
+                                    fix them.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Project 2: The Daily Tool</h5>
+                                <p>Create a "Work App" for a specific person (like a Store Manager) to track their
+                                    daily goals.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="chat-message">
-                        <p>"ProjectPal saved my semester! Got my ML assignment done in 24 hours with excellent quality.
-                            The explanations helped me understand the concepts too. Highly recommended!"</p>
-                    </div>
-                    <div class="rating">
-                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-                    </div>
                 </div>
-                <div class="testimonial-card reveal">
-                    <div class="chat-header">
-                        <div class="chat-avatar">RP</div>
-                        <div class="chat-info">
-                            <h4>Jagadeesh</h4>
-                            <p>MBA, York St John University</p>
-                        </div>
-                    </div>
-                    <div class="chat-message">
-                        <p>"Amazing service! They handled my marketing case study with such professionalism. Delivered
-                            before deadline and the quality exceeded my expectations. Worth every penny!"</p>
-                    </div>
-                    <div class="rating">
-                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="chat-header">
-                        <div class="chat-avatar">EJ</div>
-                        <div class="chat-info">
-                            <h4>Avinash Puppala</h4>
-                            <p>MS in Data Science, New Jersey Institute of Technology</p>
-                        </div>
-                    </div>
-                    <div class="chat-message">
-                        <p>"I was stuck with my Python project and had only 2 days left. ProjectPal delivered an
-                            excellent solution with proper documentation. Scored A grade! Thank you so much!"</p>
-                    </div>
-                    <div class="rating">
-                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Guarantees -->
-    <section class="guarantees">
-        <div class="guarantees-container">
-            <h2>Our Ironclad Guarantees</h2>
-            <div class="guarantees-grid">
-                <div class="guarantee-item reveal">
-                    <div class="guarantee-icon">💯</div>
-                    <h3>Quality Guarantee</h3>
-                    <p>If you're not satisfied with the quality, we'll revise it until you're happy or provide a full
-                        refund.</p>
-                </div>
-                <div class="guarantee-item reveal">
-                    <div class="guarantee-icon">🎯</div>
-                    <h3>Deadline Guarantee</h3>
-                    <p>We commit to delivering your work on or before the agreed deadline, every single time.</p>
-                </div>
-                <div class="guarantee-item reveal">
-                    <div class="guarantee-icon">🔄</div>
-                    <h3>Revision Guarantee</h3>
-                    <p>Unlimited revisions until you're completely satisfied with the final deliverable.</p>
-                </div>
-                <div class="guarantee-item reveal">
-                    <div class="guarantee-icon">💰</div>
-                    <h3>Money-Back Guarantee</h3>
-                    <p>If the work fails to meet requirements, we offer a complete refund or free rework.</p>
+                <!-- AI Data Engineer Track -->
+                <div id="track-ai" class="track-content">
+                    <div class="track-header">
+                        <h3>AI Data Engineer: The Intelligent Builder</h3>
+                        <p>Goal: Using AI to automate work.</p>
+                    </div>
+                    <div class="track-timeline">
+                        <div class="timeline-section">
+                            <h4>Weeks 3-5: AI & Automation</h4>
+                            <div class="timeline-item">
+                                <h5>AI Logic</h5>
+                                <p>Building chatbots that can actually "read" your company data.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Smart Agents</h5>
+                                <p>Creating AI assistants that can perform tasks, not just talk.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Quality Control</h5>
+                                <p>Testing the AI to make sure it doesn't give wrong or "hallucinated" answers.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-section">
+                            <h4>Weeks 6-10: Job-Specific Projects</h4>
+                            <div class="timeline-item">
+                                <h5>Project 1: The "Ask My Data" Bot</h5>
+                                <p>Build an AI assistant that can answer questions like "Which of our shipments are
+                                    going to be late?"</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Project 2: Auto-Processor</h5>
+                                <p>Build a system where AI reads customer emails and automatically starts a "Support
+                                    Ticket" for the team.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1783,15 +1016,16 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-container reveal">
-            <h2>Ready to Excel in Your Studies?</h2>
-            <p>Join thousands of successful students. Get started with a free consultation today!</p>
-            <a href="https://wa.me/917842620890?text=Hi%20ProjectPal!%20I%20need%20help%20with%20my%20assignment"
+            <h2>Ready to Master Palantir Foundry?</h2>
+            <p>Enroll now and start your journey to becoming a Palantir expert. Get in touch for course details and
+                pricing!</p>
+            <a href="https://wa.me/917842620890?text=Hi%20ProjectPal!%20I'm%20interested%20in%20the%20Palantir%20Foundry%20course"
                 class="cta-button">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                Start WhatsApp Chat
+                Enroll via WhatsApp
             </a>
         </div>
     </section>
@@ -1800,11 +1034,11 @@
     <footer>
         <p>&copy; 2024 ProjectPal. All rights reserved.</p>
         <p>Helping students achieve academic excellence worldwide</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">📞 WhatsApp: +91 78426 20890</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">WhatsApp: +91 78426 20890</p>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/917842620890?text=Hi%20ProjectPal!%20I%20need%20help%20with%20my%20assignment"
+    <a href="https://wa.me/917842620890?text=Hi%20ProjectPal!%20I'm%20interested%20in%20the%20Palantir%20Foundry%20course"
         class="whatsapp-float" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -1816,12 +1050,10 @@
         // Scroll reveal animation
         function reveal() {
             const reveals = document.querySelectorAll('.reveal');
-
             for (let i = 0; i < reveals.length; i++) {
                 const windowHeight = window.innerHeight;
                 const elementTop = reveals[i].getBoundingClientRect().top;
                 const elementVisible = 150;
-
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add('active');
                 } else {
@@ -1831,20 +1063,7 @@
         }
 
         window.addEventListener('scroll', reveal);
-        reveal(); // Check on load
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        reveal();
 
         // Track switching logic
         function switchTrack(event, trackId) {
@@ -1857,47 +1076,14 @@
                 content.classList.remove('active');
                 if (content.id === trackId) {
                     content.style.animation = 'none';
-                    content.offsetHeight; // trigger reflow
+                    content.offsetHeight;
                     content.style.animation = null;
                     content.classList.add('active');
                 }
             });
 
-            // Re-trigger scroll reveal since new content is visible
             reveal();
         }
-
-        // Course Sidebar logic
-        function switchCourse(courseId, event) {
-            document.querySelectorAll('.course-nav-item').forEach(el => el.classList.remove('active'));
-            if (event) event.currentTarget.classList.add('active');
-
-            document.querySelectorAll('.course-container').forEach(el => el.style.display = 'none');
-            document.getElementById('course-' + courseId).style.display = 'block';
-
-            // Scroll to top of modal-main
-            document.getElementById('modal-main-content').scrollTop = 0;
-
-            reveal();
-        }
-
-        // Modal logic
-        function openTrainingModal() {
-            document.getElementById('curriculum-modal').classList.add('active');
-            document.body.style.overflow = 'hidden'; // prevent scrolling
-        }
-
-        function closeTrainingModal() {
-            document.getElementById('curriculum-modal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Close modal on outside click
-        document.getElementById('curriculum-modal').addEventListener('click', function (e) {
-            if (e.target === this) {
-                closeTrainingModal();
-            }
-        });
     </script>
 </body>
 
