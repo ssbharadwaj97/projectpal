@@ -385,18 +385,10 @@
         /* Path Selection Cards */
         .path-selection-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             margin-bottom: 3rem;
             position: relative;
-        }
-
-        .path-connector {
-            display: flex;
-            justify-content: center;
-            margin: -2rem 0 2rem 0;
-            opacity: 0.6;
-            color: var(--primary-blue);
         }
 
         .path-card {
@@ -552,6 +544,116 @@
             line-height: 1.5;
         }
 
+        /* Roles Section */
+        .roles-section {
+            padding: 6rem 5%;
+            background: var(--bg-light);
+        }
+
+        .roles-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .role-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: white;
+            border-radius: 25px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .role-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .role-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .role-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .role-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Companies Section */
+        .companies-section {
+            padding: 6rem 5%;
+            background: white;
+        }
+
+        .companies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .companies-region {
+            margin-bottom: 3rem;
+        }
+
+        .companies-region:last-child {
+            margin-bottom: 0;
+        }
+
+        .companies-region h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .company-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .company-tag {
+            background: var(--bg-light);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .company-tag:hover {
+            background: var(--gradient-1);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 6rem 5%;
@@ -697,15 +799,17 @@
             .cta-container h2 {
                 font-size: 2rem;
             }
-        }
 
-        @media (max-width: 900px) {
-            .path-selection-grid {
-                grid-template-columns: 1fr;
+            .roles-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
+            .path-selection-grid {
+                grid-template-columns: 1fr;
+            }
+
             .track-timeline {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -739,8 +843,14 @@
             }
 
             .curriculum-section,
-            .cta-section {
+            .cta-section,
+            .roles-section,
+            .companies-section {
                 padding: 4rem 5%;
+            }
+
+            .roles-grid {
+                grid-template-columns: 1fr;
             }
 
             .logo-container h1 {
@@ -776,16 +886,16 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h2>Master Palantir Foundry</h2>
-                <p>A structured, hands-on training program that takes you from platform essentials to advanced
-                    engineering. Choose your career track and build real-world projects.</p>
+                <p>Instructor-led, hands-on training from platform fundamentals to advanced engineering.
+                    Milestone-based assessments, real-world projects, and certification upon completion.</p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">10</span>
-                        <span class="stat-label">Weeks Program</span>
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Courses</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Career Tracks</span>
+                        <span class="stat-number">45</span>
+                        <span class="stat-label">Training Hours</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
@@ -795,25 +905,69 @@
             </div>
             <div class="hero-features">
                 <div class="feature-item">
-                    <div class="feature-icon">🛠️</div>
+                    <div class="feature-icon">👨‍🏫</div>
                     <div class="feature-text">
-                        <h4>Data Engineer Track</h4>
-                        <p>Build the "pipes" that move and clean data at enterprise scale.</p>
+                        <h4>Instructor Led Training</h4>
+                        <p>15 hrs (Introductory) + 30 hrs (Advanced) of live, guided sessions.</p>
                     </div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon">📅</div>
                     <div class="feature-text">
-                        <h4>Data Analyst Track</h4>
-                        <p>Create dashboards and reports that help managers make decisions.</p>
+                        <h4>Flexible Schedule</h4>
+                        <p>3 hours per week with batches designed to fit your availability.</p>
                     </div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🤖</div>
+                    <div class="feature-icon">🏆</div>
                     <div class="feature-text">
-                        <h4>AI Data Engineer Track</h4>
-                        <p>Use AI to automate work with chatbots and intelligent agents.</p>
+                        <h4>Get Certified</h4>
+                        <p>Earn a course completion certificate to showcase your Palantir expertise.</p>
                     </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎓</div>
+                    <div class="feature-text">
+                        <h4>Professional Trainers</h4>
+                        <p>Learn from experienced and professional trainers from IITS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Roles Section -->
+    <section class="roles-section">
+        <div class="roles-container">
+            <div class="section-header reveal">
+                <span class="section-tag">CAREER OPPORTUNITIES</span>
+                <h2>Roles You Can Target</h2>
+                <p>This course prepares you for high-demand Palantir roles at top companies worldwide</p>
+            </div>
+            <div class="roles-grid">
+                <div class="role-card reveal">
+                    <div class="role-icon">🛠️</div>
+                    <h3>Data Engineer</h3>
+                    <p>Build and maintain enterprise data pipelines, integrate diverse data sources, and ensure data
+                        quality at scale using Foundry's transformation tools.</p>
+                </div>
+                <div class="role-card reveal">
+                    <div class="role-icon">📊</div>
+                    <h3>Data Analyst</h3>
+                    <p>Create insightful dashboards, perform complex analysis using Contours and Quiver, and deliver
+                        data-driven recommendations to stakeholders.</p>
+                </div>
+                <div class="role-card reveal">
+                    <div class="role-icon">🤖</div>
+                    <h3>AI Data Engineer</h3>
+                    <p>Design AI-powered workflows using AIP agents, build intelligent automation, and integrate machine
+                        learning models into enterprise applications.</p>
+                </div>
+                <div class="role-card reveal">
+                    <div class="role-icon">🚀</div>
+                    <h3>Palantir Forward Deployed Engineer</h3>
+                    <p>Work directly with clients to deploy Foundry solutions, build custom Workshop apps, and solve
+                        complex operational challenges on-site.</p>
                 </div>
             </div>
         </div>
@@ -825,189 +979,328 @@
             <div class="section-header reveal">
                 <span class="section-tag">TRAINING PROGRAM</span>
                 <h2>Course Curriculum</h2>
-                <p>A structured, hands-on curriculum progressing from essentials to advanced engineering.</p>
+                <p>Choose from our Introductory or Advanced course. Milestone-based assessments every week ensure you
+                    stay on track.</p>
             </div>
 
-            <!-- Phase 1 -->
-            <div class="phase-card reveal">
-                <div class="phase-header">
-                    <h3>Phase 1: The Essentials</h3>
-                    <p>Weeks 1-2 | Goal: Learn the platform "Language"</p>
+            <!-- Course Selector -->
+            <div class="path-selection-grid reveal" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="path-card active" onclick="switchTrack(event, 'course-intro')">
+                    <div class="path-icon">📘</div>
+                    <h4>Introductory Course</h4>
+                    <p>4 Weeks | 3 Hrs/Week | 15 Hrs Instructor Led</p>
                 </div>
-                <div class="phase-grid">
-                    <div class="phase-module">
-                        <h4>🧩 The Digital Twin</h4>
-                        <p>Moving from boring spreadsheets to real-world "Objects" (like a Customer or Flight).</p>
-                    </div>
-                    <div class="phase-module">
-                        <h4>🔒 Safe Keeping</h4>
-                        <p>Learning how to lock and share data properly so only the right people see it.</p>
-                    </div>
-                    <div class="phase-module">
-                        <h4>🤖 AI Basics</h4>
-                        <p>A simple intro to how AI works safely inside the platform.</p>
-                    </div>
-                    <div class="phase-module">
-                        <h4>📂 Finding Your Way</h4>
-                        <p>How to organize folders and find files in the system.</p>
-                    </div>
+                <div class="path-card" onclick="switchTrack(event, 'course-advanced')">
+                    <div class="path-icon">🚀</div>
+                    <h4>Advanced Course</h4>
+                    <p>8 Weeks | 3 Hrs/Week | 30 Hrs Instructor Led</p>
                 </div>
             </div>
 
-            <!-- Track Selection -->
-            <div>
-                <!-- Connecting Arrow -->
-                <div class="path-connector">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                        <polyline points="19 12 12 19 5 12"></polyline>
-                    </svg>
-                </div>
-
-                <div class="section-header reveal">
-                    <h2>Choose Your Track</h2>
-                    <p>Select a specialization path based on your career goals</p>
-                </div>
-
-                <div class="path-selection-grid reveal">
-                    <div class="path-card active" onclick="switchTrack(event, 'track-de')">
-                        <div class="path-icon">🛠️</div>
-                        <h4>Data Engineer</h4>
-                        <p>The Builder</p>
+            <!-- Introductory Course -->
+            <div id="course-intro" class="track-content active">
+                <div class="phase-card reveal">
+                    <div class="phase-header">
+                        <h3>Introductory Course</h3>
+                        <p>4 Weeks | 3 Hours/Week | 15 Hours Instructor Led Training | Milestone-Based Assessments</p>
                     </div>
-                    <div class="path-card" onclick="switchTrack(event, 'track-da')">
-                        <div class="path-icon">📊</div>
-                        <h4>Data Analyst</h4>
-                        <p>The Storyteller</p>
-                    </div>
-                    <div class="path-card" onclick="switchTrack(event, 'track-ai')">
-                        <div class="path-icon">🤖</div>
-                        <h4>AI Data Engineer</h4>
-                        <p>The Intelligent Builder</p>
-                    </div>
-                </div>
-
-                <!-- Data Engineer Track -->
-                <div id="track-de" class="track-content active">
-                    <div class="track-header">
-                        <h3>Data Engineer: The Builder</h3>
-                        <p>Goal: Building the "pipes" that move and clean data.</p>
-                    </div>
-                    <div class="track-timeline">
-                        <div class="timeline-section">
-                            <h4>Weeks 3-5: Building Pipelines</h4>
-                            <div class="timeline-item">
-                                <h5>Bringing Data In</h5>
-                                <p>Connecting to outside sources like Google Drive or Excel.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>The Transformation Tool</h5>
-                                <p>Using simple drag-and-drop tools to clean and join data.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Pro Coding</h5>
-                                <p>Using Python or SQL to handle the really messy data.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Health Monitoring</h5>
-                                <p>Making sure the data refreshes every day without breaking.</p>
-                            </div>
+                    <div class="phase-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                        <div class="phase-module">
+                            <h4>📘 Platform Fundamentals</h4>
+                            <p>Introduction to Palantir Foundry platform, architecture, and core navigation.</p>
                         </div>
-                        <div class="timeline-section">
-                            <h4>Weeks 6-10: Job-Specific Projects</h4>
-                            <div class="timeline-item">
-                                <h5>Project 1: The Master Dataset</h5>
-                                <p>Take data from three different places and merge them into one perfect "source of
-                                    truth."</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Project 2: Big Data Portfolio</h5>
-                                <p>Build a high-speed pipeline that handles millions of rows to show you can handle
-                                    "Enterprise Scale."</p>
-                            </div>
+                        <div class="phase-module">
+                            <h4>📂 Data Integration</h4>
+                            <p>Loading and connecting data from various sources into Foundry.</p>
                         </div>
+                        <div class="phase-module">
+                            <h4>📊 Contours for Analysis</h4>
+                            <p>Interactive data exploration, filtering, and visual analysis.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🔧 Code Pipelines Intro</h4>
+                            <p>Building basic data pipelines using code-based transforms.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🧩 Ontology Objects</h4>
+                            <p>Modeling real-world entities as objects with properties and links.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🔍 Quiver Introduction</h4>
+                            <p>Flexible analysis boards and Ontology-powered data exploration.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🖥️ Workshop Basics</h4>
+                            <p>Building operational applications and dashboards.</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem; position: relative; z-index: 1;">
+                        <span
+                            style="background: rgba(255,255,255,0.2); padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem;">
+                            + Hands-On Mini Project Combining All Learnings
+                        </span>
                     </div>
                 </div>
 
-                <!-- Data Analyst Track -->
-                <div id="track-da" class="track-content">
-                    <div class="track-header">
-                        <h3>Data Analyst: The Storyteller</h3>
-                        <p>Goal: Creating dashboards that help managers make decisions.</p>
-                    </div>
-                    <div class="track-timeline">
-                        <div class="timeline-section">
-                            <h4>Weeks 3-5: Visuals & Logic</h4>
-                            <div class="timeline-item">
-                                <h5>Finding Patterns</h5>
-                                <p>Using smart tools to find trends in big data sets.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Smart Charts</h5>
-                                <p>Building advanced graphs that show changes over time.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>App Design</h5>
-                                <p>Creating simple, clean buttons and layouts for users.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Live Reports</h5>
-                                <p>Building documents that update themselves automatically.</p>
-                            </div>
+                <div class="track-header reveal">
+                    <h3>Week-by-Week Breakdown</h3>
+                </div>
+                <div class="track-timeline reveal">
+                    <div class="timeline-section">
+                        <h4>Week 1: Platform & Data Loading</h4>
+                        <div class="timeline-item">
+                            <h5>Palantir Foundry Overview</h5>
+                            <p>Platform architecture, navigation, and core concepts.</p>
                         </div>
-                        <div class="timeline-section">
-                            <h4>Weeks 6-10: Job-Specific Projects</h4>
-                            <div class="timeline-item">
-                                <h5>Project 1: The CEO Dashboard</h5>
-                                <p>Build a report that finds the 3 biggest problems in a business and suggests how to
-                                    fix them.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Project 2: The Daily Tool</h5>
-                                <p>Create a "Work App" for a specific person (like a Store Manager) to track their
-                                    daily goals.</p>
-                            </div>
+                        <div class="timeline-item">
+                            <h5>Data Integration</h5>
+                            <p>Loading data from files, databases, and external sources into Foundry.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Weekly Assessment</h5>
+                            <p>Milestone assessment on platform navigation and data loading.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <h4>Week 2: Analysis & Pipelines</h4>
+                        <div class="timeline-item">
+                            <h5>Contours for Data Analysis</h5>
+                            <p>Interactive data exploration, filtering, grouping, and visual charting.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Code Pipelines Introduction</h5>
+                            <p>Building your first data pipeline with code-based transformations.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Weekly Assessment</h5>
+                            <p>Milestone assessment on data analysis and pipeline basics.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <h4>Week 3: Ontology & Exploration</h4>
+                        <div class="timeline-item">
+                            <h5>Ontology Objects</h5>
+                            <p>Modeling real-world entities, defining object types, properties, and links.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Quiver Introduction</h5>
+                            <p>Flexible analysis boards, Ontology-powered queries, and data exploration.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Weekly Assessment</h5>
+                            <p>Milestone assessment on Ontology modeling and Quiver analysis.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <h4>Week 4: Workshop & Mini Project</h4>
+                        <div class="timeline-item">
+                            <h5>Workshop Introduction</h5>
+                            <p>Building operational apps with widgets, actions, and Ontology-backed layouts.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Mini Project</h5>
+                            <p>End-to-end project: load data, build pipelines, model objects, and create a Workshop
+                                dashboard.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Final Assessment</h5>
+                            <p>Project presentation and comprehensive milestone evaluation.</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- AI Data Engineer Track -->
-                <div id="track-ai" class="track-content">
-                    <div class="track-header">
-                        <h3>AI Data Engineer: The Intelligent Builder</h3>
-                        <p>Goal: Using AI to automate work.</p>
+            <!-- Advanced Course -->
+            <div id="course-advanced" class="track-content">
+                <div class="phase-card reveal">
+                    <div class="phase-header">
+                        <h3>Advanced Course</h3>
+                        <p>8 Weeks | 3 Hours/Week | 30 Hours Instructor Led Training | Milestone-Based Assignments &
+                            Projects</p>
                     </div>
-                    <div class="track-timeline">
-                        <div class="timeline-section">
-                            <h4>Weeks 3-5: AI & Automation</h4>
-                            <div class="timeline-item">
-                                <h5>AI Logic</h5>
-                                <p>Building chatbots that can actually "read" your company data.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Smart Agents</h5>
-                                <p>Creating AI assistants that can perform tasks, not just talk.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Quality Control</h5>
-                                <p>Testing the AI to make sure it doesn't give wrong or "hallucinated" answers.</p>
-                            </div>
+                    <div class="phase-grid">
+                        <div class="phase-module">
+                            <h4>🔧 Advanced Pipelines</h4>
+                            <p>Complex data pipelines, scheduling, and health monitoring.</p>
                         </div>
-                        <div class="timeline-section">
-                            <h4>Weeks 6-10: Job-Specific Projects</h4>
-                            <div class="timeline-item">
-                                <h5>Project 1: The "Ask My Data" Bot</h5>
-                                <p>Build an AI assistant that can answer questions like "Which of our shipments are
-                                    going to be late?"</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h5>Project 2: Auto-Processor</h5>
-                                <p>Build a system where AI reads customer emails and automatically starts a "Support
-                                    Ticket" for the team.</p>
-                            </div>
+                        <div class="phase-module">
+                            <h4>📊 Advanced Contours</h4>
+                            <p>Complex analytical workflows and deep-dive data exploration.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>💻 Code Repositories</h4>
+                            <p>Repository structure, branching, CI/CD, and collaboration.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🔄 Code Transformations</h4>
+                            <p>Python & SQL transforms for data cleaning and enrichment at scale.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🧩 Advanced Ontology</h4>
+                            <p>Complex object modeling, actions, writeback, and relationships.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🔍 Advanced Quiver</h4>
+                            <p>Ontology-powered queries and advanced analysis boards.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🤖 AIP Agents</h4>
+                            <p>AI-powered agents that reason over data and automate workflows.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>⚡ Foundry Functions</h4>
+                            <p>Reusable TypeScript server-side logic and automation.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>📈 Data Visualization</h4>
+                            <p>Advanced dashboards, custom charts, and Workshop applications.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🖥️ Advanced Workshop</h4>
+                            <p>Production-grade operational apps with complex layouts and actions.</p>
+                        </div>
+                        <div class="phase-module">
+                            <h4>🔒 Security & Governance</h4>
+                            <p>Access controls, data lineage, and governance best practices.</p>
                         </div>
                     </div>
+                    <div style="text-align: center; margin-top: 2rem; position: relative; z-index: 1;">
+                        <span
+                            style="background: rgba(255,255,255,0.2); padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem;">
+                            + Mini Projects & Major Capstone Project
+                        </span>
+                    </div>
+                </div>
+
+                <div class="track-header reveal">
+                    <h3>Week-by-Week Breakdown</h3>
+                </div>
+                <div class="track-timeline reveal">
+                    <div class="timeline-section">
+                        <h4>Weeks 1-2: Advanced Data Engineering</h4>
+                        <div class="timeline-item">
+                            <h5>Advanced Data Integration</h5>
+                            <p>Complex data sources, incremental syncs, and multi-source pipelines.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Pipeline Engineering</h5>
+                            <p>Advanced scheduling, branching logic, error handling, and health monitoring.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Advanced Contours & Quiver</h5>
+                            <p>Complex analytical workflows and Ontology-powered deep-dive analysis.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Milestone Assignment</h5>
+                            <p>Build a production-grade multi-source data pipeline with monitoring.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <h4>Weeks 3-4: Code Repos & Transformations</h4>
+                        <div class="timeline-item">
+                            <h5>Code Repositories Deep Dive</h5>
+                            <p>Repository structure, branching, CI/CD, and collaborative development.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Python & SQL Transforms</h5>
+                            <p>Writing efficient code transforms for complex data cleaning and enrichment.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Advanced Ontology Modeling</h5>
+                            <p>Complex object types, actions, writeback, and Ontology-driven applications.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Milestone Assignment</h5>
+                            <p>Build code-based transforms with automated testing and Ontology integration.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <h4>Weeks 5-6: AI, Functions & Visualization</h4>
+                        <div class="timeline-item">
+                            <h5>AIP Agents</h5>
+                            <p>Building AI agents that reason over your data and automate decision-making.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Foundry Functions</h5>
+                            <p>Creating reusable TypeScript functions for server-side logic and automation.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Advanced Data Visualization</h5>
+                            <p>Custom charts, interactive dashboards, and production-grade Workshop apps.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Mini Project</h5>
+                            <p>Build an AI-powered application with Foundry Functions and Workshop.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <h4>Weeks 7-8: Projects & Capstone</h4>
+                        <div class="timeline-item">
+                            <h5>Security & Governance</h5>
+                            <p>Access controls, data lineage, collaboration workflows, and best practices.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Mini Projects</h5>
+                            <p>Focused mini projects combining pipelines, Ontology, AIP agents, and Workshop.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Major Capstone Project</h5>
+                            <p>End-to-end enterprise solution: data ingestion, transforms, Ontology, AI agents,
+                                and a full Workshop application.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Final Presentation</h5>
+                            <p>Present your capstone project and receive comprehensive evaluation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Using Palantir -->
+    <section class="companies-section">
+        <div class="companies-container">
+            <div class="section-header reveal">
+                <span class="section-tag">WHERE YOU COULD WORK</span>
+                <h2>Top Companies Using Palantir</h2>
+                <p>Major organizations across the US and UK rely on Palantir Foundry for their critical operations</p>
+            </div>
+
+            <div class="companies-region reveal">
+                <h3>United States</h3>
+                <div class="company-tags">
+                    <span class="company-tag">Morgan Stanley</span>
+                    <span class="company-tag">JPMorgan Chase</span>
+                    <span class="company-tag">Merck</span>
+                    <span class="company-tag">Bristol-Myers Squibb</span>
+                    <span class="company-tag">3M</span>
+                    <span class="company-tag">Stellantis (Fiat Chrysler)</span>
+                    <span class="company-tag">Ferrari</span>
+                    <span class="company-tag">Raytheon (RTX)</span>
+                    <span class="company-tag">L3Harris Technologies</span>
+                    <span class="company-tag">BP America</span>
+                    <span class="company-tag">PG&E</span>
+                    <span class="company-tag">Tyson Foods</span>
+                    <span class="company-tag">Hertz</span>
+                    <span class="company-tag">Jacobs Engineering</span>
+                    <span class="company-tag">U.S. Army</span>
+                    <span class="company-tag">CDC</span>
+                    <span class="company-tag">NIH</span>
+                </div>
+            </div>
+
+            <div class="companies-region reveal">
+                <h3>United Kingdom</h3>
+                <div class="company-tags">
+                    <span class="company-tag">NHS England</span>
+                    <span class="company-tag">BP</span>
+                    <span class="company-tag">Rolls-Royce</span>
+                    <span class="company-tag">GlaxoSmithKline (GSK)</span>
+                    <span class="company-tag">Airbus UK</span>
+                    <span class="company-tag">National Grid</span>
+                    <span class="company-tag">Babcock International</span>
+                    <span class="company-tag">Ministry of Defence</span>
                 </div>
             </div>
         </div>
